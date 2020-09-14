@@ -1,0 +1,36 @@
+.layout-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex: auto;
+}
+.layout-main-container {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  padding-top: 64px;
+}
+.header-wrapper {
+  top: 0;
+  width: 100%;
+  padding: 0;
+  background-color: #ffffff;
+}
+.collapsed {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.collapsed:hover {
+  background-color: #f0f0f0;
+}
+.main-container {
+  min-height: unset;
+  margin: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+}

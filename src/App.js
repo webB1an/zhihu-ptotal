@@ -1,26 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom'
+import Layout from './pages/Layout'
+
+/*
+  录入类别
+*/
+/*
+  类别信息
+  名称
+  优点
+  缺点
+  描述
+*/
+/*
+  录入条目
+*/
+/*
+  条目信息
+  名称
+  分类
+  优点
+  缺点
+  图片
+  描述
+*/
+
+/*
+/write/sort 分类
+/write/item 条目
+/search 查询
+*/
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Redirect to="/layout" />
+        </Route>
+        <Route path="/layout" component={Layout} />
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App
