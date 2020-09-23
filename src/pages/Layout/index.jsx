@@ -11,6 +11,7 @@ import Sort from '../Write/Sort'
 import Item from '../Write/Item'
 import Search from '../Search'
 import SortList from '../Sort'
+import Random from '../Random'
 
 import { Layout, Menu } from 'antd'
 
@@ -20,6 +21,7 @@ import {
   FormOutlined,
   UnorderedListOutlined,
   SearchOutlined,
+  SyncOutlined
 } from '@ant-design/icons'
 import 'antd/dist/antd.css'
 
@@ -105,6 +107,9 @@ function LayoutPage() {
           <Menu.Item key="/layout/search" icon={<SearchOutlined />}>
             查询条目
           </Menu.Item>
+          <Menu.Item key="/layout/random" icon={<SyncOutlined />}>
+            随机生成
+          </Menu.Item>
         </Menu>
       </Sider>
 
@@ -123,6 +128,7 @@ function LayoutPage() {
             <Route path="/layout/write/item" component={Item} />
             <Route path="/layout/search" component={Search} />
             <Route path="/layout/sortlist" component={SortList} />
+            <Route path="/layout/random" component={Random} />
           </Switch>
         </Content>
       </Layout>

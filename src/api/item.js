@@ -23,3 +23,11 @@ export function deleteItem(data = {}) {
     data
   })
 }
+
+export function getRandomItem(data = {}) {
+  return request({
+    url: '/item/random',
+    method: 'post',
+    data
+  })
+}
